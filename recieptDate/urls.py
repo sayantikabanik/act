@@ -25,6 +25,6 @@ from django.conf.urls import (
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('', include('extractdate.urls')),
+    path('', include('extractdate.urls')),
 
 ]

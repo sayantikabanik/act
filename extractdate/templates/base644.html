@@ -1,9 +1,10 @@
 
 
-<form action="/date/" method="POST">
+<form method="POST" action="/date/" >
     {% csrf_token %}
     {{form}}
 <!--     <input type="text" name="fulltextarea">
  -->    <input type="submit" value="Submit">
 </form>
 
+<p>{{date_output}}</p>

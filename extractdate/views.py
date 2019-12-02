@@ -28,17 +28,23 @@ def home(request):
 			# base64_string.save()
 			data=form.cleaned_data
 			res=data['image_string']
-			print(res)
-			# base64_string=request.POST.get('fulltextarea')
-			date_extract(request,res)
-			# print(base64_string)
+			# print(res)
+			# date_extract(request,res)
+			# date_extract(request,res)	
+			return (res)
+			# HttpResponseRedirect('/date')
+
 	else:
 	  form=imageForm()
 	return render(request,'base644.html',{'form':form})
+	# return date_extract(request,res,form)	
 	# pdb.set_trace()
 
 
-def date_extract(request,res):
+def date_extract(request):
+	res=home(request)
+	print(res)
+
 
 	
 	_url = 'https://southeastasia.api.cognitive.microsoft.com//vision/v2.0/recognizeText'
@@ -200,14 +206,19 @@ def date_extract(request,res):
 	if df.date_avail.dtype != 'float64':
 		# return HttpResponse(request,{'date':date_output})
 		return render(request,'output.html',{'date_output':date_output})
+		# return JsonResponse({'date_output':date_output}, status=201)
 		
 	else:
 		# return HttpResponse(request,{'date':"null"})
-		return render(request,'output.html',{'date_output':date_output})
+		return render(request,'output.html',{'date_output':"null"})
+		# return JsonResponse({'date_output':"null"}, status=201)
 
 
 
-
+# def redirect_course(request):
+#         date_extract(request)
+#         return redirect('results/')
+# ~                                        
 
 
 
