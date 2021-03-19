@@ -10,7 +10,7 @@ Django==2.2.5
 django-allauth==0.40.0
 django-cors-headers==3.1.1
 django-elasticsearch-dsl==6.4.1
-djangorestframework==3.10.3
+djangorestframework==3.11.2
 elasticsearch==6.4.0
 elasticsearch-dsl==6.4.0
 et-xmlfile==1.0.1
