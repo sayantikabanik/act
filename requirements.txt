@@ -22,7 +22,7 @@ jdcal==1.4.1
 langdetect==1.0.7
 lxml==4.4.1
 nltk==3.4.5
-numpy==1.17.2
+numpy==1.22.0
 oauthlib==3.1.0
 opencv-python==4.1.2.30
 openpyxl==3.0.0
